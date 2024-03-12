@@ -1,0 +1,51 @@
+digraph bowling {
+	node [shape=circle]
+	1 [label="
+   1
+   1 1
+   1 1 1
+  1 1 1 1
+  INITIAL
+    "]
+	2 [label="
+   1
+   0 0
+   0 0 0
+  0 0 0 0
+    "]
+	0 [label="
+   0
+   0 0
+   0 0 0
+  0 0 0 0
+  TERMINAL
+    "]
+	other [label="other 
+states 
+(2045)"]
+	node [fillcolor=black fontcolor=white shape=circle style=filled]
+	L [label=Left]
+	M [label=Middle]
+	R [label=Right]
+	1 -> L [arrowhead=dot color=red style=dotted]
+	1 -> M [arrowhead=dot color=red style=dotted]
+	1 -> R [arrowhead=dot color=red style=dotted]
+	other -> M [arrowhead=dot color=red style=dotted]
+	other -> R [arrowhead=dot color=red style=dotted]
+	other -> L [arrowhead=dot color=red style=dotted]
+	2 -> L [arrowhead=dot color=red style=dotted]
+	2 -> M [arrowhead=dot color=red style=dotted]
+	2 -> R [arrowhead=dot color=red style=dotted]
+	L -> 1 [label="p: P(s'|s, a), r:-1"]
+	L -> 0 [label="p: P(s'|s, a), r:-1"]
+	L -> 2 [label="p: P(s'|s, a), r:-1"]
+	L -> other [label="p: P(s'|s, a), r:-1"]
+	M -> 1 [label="p: P(s'|s, a), r:-1"]
+	M -> 0 [label="p: P(s'|s, a), r:-1"]
+	M -> 2 [label="p: P(s'|s, a), r:-1"]
+	M -> other [label="p: P(s'|s, a), r:-1"]
+	R -> 1 [label="p: P(s'|s, a), r:-1"]
+	R -> 0 [label="p: P(s'|s, a), r:-1"]
+	R -> 2 [label="p: P(s'|s, a), r:-1"]
+	R -> other [label="p: P(s'|s, a), r:-1"]
+}

@@ -1,0 +1,25 @@
+digraph maze_noise {
+	node [shape=circle]
+	"(2, 0)"
+	"(1, 0)"
+	"(2, 1)"
+	node [fillcolor=black fontcolor=white shape=circle style=filled]
+	N [label=NORTH]
+	E [label=EAST]
+	S [label=SOUTH]
+	W [label=WEST]
+	"(2, 0)" -> N [arrowhead=dot color=red style=dotted]
+	"(2, 0)" -> E [arrowhead=dot color=red style=dotted]
+	"(2, 0)" -> S [arrowhead=dot color=red style=dotted]
+	"(2, 0)" -> W [arrowhead=dot color=red style=dotted]
+	W -> "(1, 0)" [label="p: 0.1, r:-0.1"]
+	W -> "(2, 0)" [label="p: 0.9, r:-0.1"]
+	E -> "(1, 0)" [label="p: 0.1, r:-0.1"]
+	E -> "(2, 0)" [label="p: 0.1, r:-0.1"]
+	E -> "(2, 1)" [label="p: 0.8, r:-0.1"]
+	S -> "(2, 1)" [label="p: 0.1, r:-0.1"]
+	S -> "(2, 0)" [label="p: 0.9, r:-0.1"]
+	N -> "(1, 0)" [label="p: 0.8, r:-0.1"]
+	N -> "(2, 0)" [label="p: 0.1, r:-0.1"]
+	N -> "(2, 1)" [label="p: 0.1, r:-0.1"]
+}
